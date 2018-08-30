@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<LINK REL="STYLESHEET" HREF="../css/algo.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Algo Tech Help</title>
+</head>
+
+<body>
+<h2>Notes on Creating and Editing an Algorithm in the Harvard Psychopharmacology Algorithms Series</h2>
+
+<p>Joomla editor login name = admin, password = samrap url is: http://psychopharm.mobi/joomla/administrator/index.php</p>
+<p>The development version of the algorithms is at http://psychopharm.mobi/?JSON={%22loc%22:%22dev%22}</p>
+<p>The live version is at http://psychopharm.mobi</p>
+<p>The Joomla Editor organizes data around three levels. Sections are the broadest type. Categories are in Sections and Articles are in Categories.</p>
+<p><strong>Sections</strong> has one entry for each algorithm and one for Common info</p>
+<p><strong>Categories</strong>: Each Graph and or other left hand pages has an entry as a category</p>
+<p><strong>Articles</strong> Each node in a graph can have an article attached to it. It is not required, however. The connecting lines with their labels can also have articles attached but that is not automated at this time.<br />
+  <br />
+  Articles and nodes in the charts are tied together by an &quot;alias&quot; which is first asigned to a node in the flowchart. That alias is then given to corrosponding article. Aliases cannot contain capital letters or underscores. The alias is used as the 'id' for its node. The same alias is used in the imap to tell the program which article to display when a node in the flowchart is clicked..<br />
+<br />
+The title page and BIOs are articles in the common Info section, category General Info. Each new algo has to have its title added to the title page algo list<br />
+<br />
+The .gif for charts are in Joomla under the category  they represent. They are placed via ftp in the Joomla/images/stories folder.<br />
+<br />
+Each flowchart has an imap which tells the program when a user clicks on a node and which explanation text to display at that time. The imap (really .cmapx) file is placed  in the Description part of the same Category as its .gif chart. The <a href="http://psychopharm.mobi/dev/helperProgs/algoHelper.html">AlgoHelper Program</a> can process imaps and place them in Joomla. See it for more details.<br />
+<br />
+When creating a new category, set its section to the correct algorithm.<br />
+</p>
+<p><strong>References</strong></p>
+<p>The system is designed to seemlessly move references stored in EndNote into the algorithms. In the place where  you want a reference in the text put (#X) where X is the EndNote ID number. Multiple references look like this: (#10,#13,#56). Multiple references in sequencial order cannot be specified as x-y. Each one must be entered.</p>
+<p>The Endnote numbers will be replaced with sequential numbers in parentheses beginning with 1 in the specific article they are in. The AlgoHelper program can process references taken from EndNote. See <a href="http://psychopharm.mobi/dev/helperProgs/algoHelper.html">AlgoHelper Program</a> for details.<br />
+</p>
+Updated March 4, 2012
+</body>
+</html>

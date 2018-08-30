@@ -1,0 +1,36 @@
+digraph G {
+graph [ fontsize="12.0" ];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+
+
+back      [id=back label="<-Go Back" fontcolor="red"  URL="javascript:navButton('-')"];
+
+node1     [id=node1  label="Met criteria for DSM-5 diagnosis of GAD" style=filled URL=placholder];
+node1a	  [id=node1a label="Consider these at each node:\nInsomnia\nSubstance use disorders\nWomen of childbearing potential\n Pregnant women\nElderly\nNeuropathic pain\nMajor depression\nBipolar depression\nBipolar mania\nPosttraumaticstress disorder" URL=placeholder];
+
+node2     [id=node2 label="Adequate trial of SSRI?" URL=placholder];
+node3      [id=node3 label="Tried second SSRI\n or duloxetime?"  style=filled URL=placeholder];
+node4      [id=node4 label="Try an SSRI or consider\n duloxetine or less favored\n options buspirone,\n hydroxyzine, pregabalin\n or bupropion"  style=filled URL=placeholder];
+node5      [id=node5 label="Augment with: hydroxyzine,\n pregabalin or benzodiazepine.\n (No second generation\n antipsychotic until third trial.)"  style=filled URL=placeholder];
+
+back->node1->node1a->node2;
+node2->node3  [label= "Yes: no\n response"];
+node2->node4  [label= "No"];
+node2->node5  [label= "Yes: partial\n response"];
+
+node6      [id=node6 label="Try another SSRI or duloxetine, or\n the alternatives buspirone, hydroxyzine,\n pregabalin, bupropion, benzodiazepine,\n venlafaxine, agomelatine (not available in US),\n kava, rhodiola rosea or lavender oil\n (No second generation antipsychotic until third trial.)"  style=filled URL=placeholder];
+node7      [id=node7 label="Tried SNRI?"  style=filled URL=placeholder];
+node8      [id=mode8 label="Try an SNRI,\n other alternatives (below),\n quetiapine or risperidone\n (Other SGAs have not been\n adequately studied.\n Avoid olanzapine.),\n valproate"  style=filled URL=placeholder];
+
+
+
+node3-> node6  [label="No"];
+node3-> node7 [label="Yes: no\n response"];
+node3-> node5  [label="Yes: partial\n response"];
+node7-> node5  [label="Yes: partial\n response"];
+node7-> node8  [label="No"];
+node8-> node6  [label="Also consider"];
+}

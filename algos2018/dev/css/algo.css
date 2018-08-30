@@ -1,0 +1,499 @@
+
+.mm-listview li span {
+   font-size: 16px;
+}
+
+
+
+
+
+   BODY { font-family: Ariel,Helvetica,sanserif}
+   BODY { font-size: 11pt }
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.headCentered
+	{
+		font-size: 24pt;
+		font-weight : bold;
+		text-align:center;
+	}
+   
+.head
+	{
+		font-size: 16pt;
+		font-weight : bold;
+	}
+	
+.subhead
+	{
+		font-size: 14pt;
+		font-weight : bold;
+	}
+	
+.subsubhead
+	{
+		font-size: 12pt  !important;
+		font-weight : bold !important;
+	}
+
+.fontsize8
+	{
+		font-size: 8pt;
+	}
+
+
+	
+.hideIt {
+ 	 display: none;
+	}
+	
+.showIt {
+	background-color: #ffffff;
+	}
+
+.screensUnderline
+	{
+		text-decoration: underline;
+		font-size: 10pt;
+		font-weight : bold;
+		color: #000;		
+	}	
+.screens_hideIt    /* On paper don't hide and don't underline */
+	{
+		 display: none; 
+	}
+.screens_showIt    /* On paper don't hide and don't underline */
+	{
+		 display: block;
+		 text-decoration: none;
+		 padding-left:0px;
+		 font-size: 9pt;
+		 color: #000;	 
+	}
+
+
+ .alignLeft
+	{
+		text-align:left;
+	}
+
+.closeBox 
+{
+	color: #FFFFFF;
+	font-size: 12pt;
+	text-align:right;
+	font-weight:bold;
+}
+
+.refBox
+{
+	background-color:#C8FF99;
+	display: block;
+
+//	display: none; 
+}
+
+.takeNote
+{
+	font-weight:bold;
+	font-size: 14pt;	
+	font-family: Bradley Hand, cursive;  // Comic Sans;
+}
+
+
+
+
+
+/*
+ .registration 
+ {
+ 	padding: 25 0 0 100;
+}
+
+td {
+	padding: 4px;
+}
+
+.td5 {
+	padding: 7px;
+}
+
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 9pt;
+	color: #000;
+}
+
+.point10{
+	font-size: 9pt;
+}
+
+.point9Red{
+	font-size: 9pt;
+	color: #cc0066
+}
+
+a:hover {
+	text-decoration: none;
+}
+a.light {
+	font-size: 9pt;
+}
+.light {
+	font-size: 9pt;
+	line-height: 9pt;
+}
+a.tooltip {
+	color: #000000;
+	font-size: 10pt;
+}
+
+button, .btn {
+	color: #000;
+	font-size: 8pt;
+	font-weight: bold;
+	background-color: #B2B2B2;
+	border: 1px solid #fff;
+	height: 20px;
+}
+
+img {
+	border: 0;
+}
+
+#topRow {
+	background:transparent url(images/bg.jpg)
+	height: 115px;
+	border-bottom: 5px solid #999B9B;
+	line-height: 14pt;
+	background: url('images/bg.jpg') top right no-repeat;   
+}
+
+#redBar {
+	height: 32px;
+	background-color: #A90533;
+	color: #FBF2F4;
+	border-top: 1px solid #791F38;
+	border-bottom: 5px solid #B2B2B2;
+}
+#redBar .insides {
+	margin: 5px 0 0 12px;
+
+}
+
+#logOutButton{
+	background-color: #fff;
+	border: 2px solid #A90533;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+#logInButton{
+	background-color: #fff;
+	border: 2px solid #A90533;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+#content {
+	margin: 20px 0 10px 10px;
+}
+
+
+
+ul.nav {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	width: 200px;
+	color: #666666;
+}
+
+.color_1_box{
+	background-color: #CCFFCC;
+}
+
+ul.nav li {
+	background: none;
+	padding: 4px 0 3px 15px;
+	margin-left: 10px;
+	font-size: 9pt;
+}
+ul.nav li:hover, ul.nav li.selected {
+	background: url('images/red_box.gif') left 50% no-repeat;
+	color: #A90533;
+}
+ul.nav li a {
+	color: inherit;
+	text-decoration: none;
+}
+ul.nav li img {
+	float: right;
+	margin-right: 25px;
+}
+
+.greybox {
+	background-color: #F2F2F2;
+	border: 1px solid #BABABA;
+	border-right: 0;
+}
+
+.grey{
+	background-color: #F2F2F2;  
+	}
+.black{
+	background-color: #FFFFFF;  
+	}
+
+.tab1top, .tab3top {
+	background: url('images/tab1_top_left.gif') bottom left no-repeat;
+	height: 27px;
+}
+
+.tenPnt{
+	font-size: 10pt;
+}
+	
+.ninePnt{
+	font-size: 9pt;
+}
+
+
+
+.order {
+	margin: 4px 0 4px 50px;  
+}
+
+
+.list {
+	width: 125px;
+	float: left;
+	font-size: 8pt;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.grey {
+	color: #6D6D6D;
+}
+.greyAnchor {
+	color: #6D6D6D;
+}
+.red {
+	color: #A90533;
+}
+.biggish {
+	font-size: 11pt;
+}
+
+.bold{
+	font-weight: bold;
+	}
+	
+.smallish {
+	font-size: 8pt;
+}
+.ninePoint{
+	font-size: 9pt;
+}
+
+.red2{
+	font-size: 10pt;
+	background-color: #FF9999;  
+	font-weight: bold;
+}
+
+.yel{
+	font-size: 10pt;
+	background-color: #FFFF99;
+	font-weight: bold;
+}
+
+.blue{
+	font-size: 10pt;
+	background-color: #CCCCFF;
+	font-weight: bold;
+}
+.green{
+	font-size: 10pt;
+	font-weight: bold;
+}
+.brown{
+	background-color: #FFCFAA;
+	font-weight: bold;
+}
+.tabReg{
+	font-size: pt;
+	font-weight: bold;
+}
+
+
+
+#dhtmlgoodies_tooltip{
+	background-color:#FFFFFF;
+	border:1px solid #000;
+	position:absolute;
+	display:none;
+	z-index:20000;
+	padding:6px;
+	font-size:12pt; 
+	-moz-border-radius:6px;	
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", Arial, sans-serif;
+
+}
+#dhtmlgoodies_tooltipShadow{
+	position:absolute;
+	background-color:#555;
+	display:none;
+	z-index:10000;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	-khtml-opacity: 0.7;
+	-moz-opacity: 0.7;
+	-moz-border-radius:6px;
+}
+
+		
+.hideIt {
+ 	 display: none;
+	}
+	
+.showIt {
+	background-color: #ffffff;
+	}
+.showCheck {
+	background-color: #C0FF88;
+	}
+
+.visabilityNone{
+	visibility:hidden;
+	}	
+.visabilityYes{
+	visibility:visible;
+	}
+.alignRight{
+	font-size: 9pt;
+	text-align: right;
+	}
+	
+.mj{
+	font-family : Arial;
+	font-weight : bold;
+	font-size: 11pt 
+	}	
+	
+.mn{
+	font-size: 8pt 
+	}
+.blinkON
+{
+	text-decoration: blink;
+	color: #FFD700; 	
+}
+.blinkOFF
+{
+	text-decoration: none;
+	color: #FFD700; 
+}
+	.head
+	{
+		font-size: 24pt;
+		font-weight : bold;
+	}
+	
+	.headCentered
+	{
+		font-size: 24pt;
+		font-weight : bold;
+		text-align:center;
+	}
+	
+	.subsubhead
+	{
+		font-size: 11pt;
+		font-weight : bold;
+	}
+	.subhead
+	{
+		font-size: 14pt;
+		font-weight : bold;
+	}
+	.subheadBlack
+	{
+		font-size: 14pt;
+		font-weight : bold;
+	}	
+	.subsubheadBlack
+	{
+		font-size: 12pt;
+		font-weight : bold;
+	}
+
+
+	.colHead
+	{
+		background-color : #CCCCCC;
+		font-weight: bold; 
+		text-align: center;
+		border: 0px solid #006688;
+	}
+	div.lrgDiv {
+		margin-left: 15px;
+		margin-right: 45px;
+	}
+		
+.clickable {
+	cursor:pointer;	
+}
+
+.standOut
+	{
+		background-color: #B877FF;
+	}
+	
+.tip-target {
+            width: 100px;
+            text-align:center;
+            padding: 5px 0;
+            border:1px dotted #99bbe8;
+            background:#dfe8f6;
+            color: #15428b;
+            cursor:default;
+            margin:10px;
+            font:bold 11px tahoma,arial,sans-serif;
+            float:left;
+        }
+		
+.sliderC {
+	font-size: 10pt;
+	text-align: center;
+//	background-color : #CCCCCC;
+}
+
+.scaleDonetd {
+	font-size: 10pt;
+	text-align: left;
+
+}
+
+.scaleDonetdColor {
+	font-size: 10pt;
+	text-align: left;
+	background-color : #CCCCCC;
+}
+
+*/
+		

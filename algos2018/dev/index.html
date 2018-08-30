@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+
+
+<meta charset="UTF-8">
+
+  		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.all.js"></script>
+  		
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/addons/dropdown/jquery.mmenu.dropdown.js"></script>
+  <!--       <script src="js/offCanvasMenu.js"></script>  -->
+   		<link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.all.css" rel="stylesheet" />
+   
+   <link href="css/hamburgers.min.css" rel="stylesheet">
+   
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/extensions/themes/jquery.mmenu.themes.css" rel="stylesheet" />  
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/addons/dropdown/jquery.mmenu.dropdown.css" rel="stylesheet" />     
+   
+   <link href="css/algo.css" rel="stylesheet"/>
+
+   <script src="js/algo.js"></script>
+
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, maximum-scale=3.0, width=device-width" />         
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+
+        <title>Psychopharm Algorithms</title>    
+        <script>
+        var Gbl = {
+            algoURL: 'http://psychopharm.mobi/docrootAlgo/',
+            serverLocation: 'dev',  //very important
+            algoObj: null,
+            imageAr: null,
+            qsParm: new Array(),
+            leftPanel: 'titlePage',
+    //        destinationFunction: null,
+            chartToDisplay: null,
+            commonInfoAr: {"task":"commonInfos"},
+            currentAlgo: null,
+            currentPage: 'title',
+            screenWidth: screen.width,
+            openBio: null
+        };
+        
+//		Gbl.screenWidth = window.screen.width * 0.7;
+//		if(Gbl.screenWidth > 400) Gbl.screenWidth = 400;     
+        
+        
+      </script>   
+</head>
+<body>
+<div id="my-page">
+
+
+<! --------------BUTTON ---------------------- >
+ <button id="my-icon" class="hamburger hamburger--minus" type="button">     
+   <span class="hamburger-box">
+      <span class="hamburger-inner"></span> 
+   </span>
+</button>
+
+ <div id="my-content">  
+<table border="0" valign="top" cellpadding="4">
+    <td valign="top"> 
+        <span id="leftPanel"> </span>
+        <span id="myMap"> </span>
+    </td>
+  </tr>
+</table>
+    <div id="explainWin" class="hideIt" style="position:absolute; top:100 px; left:10 px; width: 300 px">
+    <fieldset>
+        <table id="explainWinTable" width="100%" border="1" cellspacing="0" bgcolor="#AA0000">
+            <tr>
+                <td  onmouseover="cursorSet()" onclick="closeWin('explainWin')" class="closeBox">X&nbsp;&nbsp;&nbsp;<br><br></td>
+            </tr>
+        </table>
+        <span class="subhead" id="explainHeadline"> </span>
+        <br><span class="alignLeft" id="explainTextSpan"> </span>
+    <iframe id="handyIframe" name="handyIframe" src="" width="320" height="300" class='hideIt'></iframe>
+</fieldset>
+</div>
+
+  
+
+<! ------------ MENU -------------------     class="Selected"   ----->
+<nav id="my-menu">
+   <ul>
+	<li><span>Algorithm Flowcharts</span><ul>
+            <li><a href="#" onclick="showCommonInfo('npdep','title')" id="npdep">Non-Psychotic Depression</a></li>
+            <li><a href="#" onclick="showCommonInfo('adhd', 'title')"  id=adhd)">ADHD</a></li>
+            <li><a href="#" onclick="showCommonInfo('pdep', 'title')" id="pdep">Psychotic Depression</a></li>
+            <li><a href="#" onclick="showCommonInfo('bpdep','title')" id="bpdep">Bipolar Depression</a></li>
+            <li><a href="#" onclick="showCommonInfo('mania','title')" id="mania">Bipolar Mania</a></li>
+            <li><a href="#" onclick="showCommonInfo('schiz','title')" id="schiz">Schizophrenia</a></li>
+            <li><a href="#" onclick="showCommonInfo('gad',  'title')" id="gad">Gereralized Anxiety Disprder</a></li>
+            <li><a href="#" onclick="showCommonInfo('anxiety',  'title')" id="sad">Social Anxiety Disporder</a></li>
+            <li><a href="#" onclick="showCommonInfo('ptsd', 'title')" id="ptsd">Posttraumatic Stress Disorder</a></li>
+</ul></li>
+	<li><a href="#" onclick="showCommonInfo('title','leftPanel')"  id="home">Home</a></li>
+    <li><a href="#" onclick="showCommonInfo('about','leftPanel')"  id="about">About</a></li>
+    <li><a href="#" onclick="showCommonInfo('dnobio','leftPanel')"  id="ndobio">David N. Osser, M.D. biography</a></li>
+    <li><a href="#" onclick="showCommonInfo('contact','leftPanel')"  href="#">Contact</a></li>
+   </ul>
+</nav> 
+ 
+</div>  <!--  end my-content-->
+</div>  <!--  end my-page -->
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

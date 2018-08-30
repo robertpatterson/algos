@@ -1,0 +1,96 @@
+digraph G {
+graph [ fontsize="12.0" ];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+
+subgraph group1{
+back           [id=goBack label="<-Go Back", fontcolor="red",  URL="javascript:navButton('-')"];
+depression     [id=diagnosis label="Bipolar Depression?", style=filled,URL=placholder];
+urgentect      [id=urgentect label="Urgent need for ECT?",style=filled, URL=placeholder];
+includeantipsychotic [id=includeantipsychotic label="Include\nAntipsychotic", URL=placeholder];
+psychotic      [id=psychotic label="Psychotic?",label="Psychotic?" style=filled URL=placeholder];
+giveect        [id=giveect label="Give ECT", URL=placeholder];
+
+depression -> urgentect [label="Yes"];
+urgentect -> giveect   [label= "Yes"];
+urgentect -> psychotic [label="No"];
+
+psychotic -> includeantipsychotic [label="Yes"];
+psychotic -> curmeds [label="No",lhead=cluster0];
+includeantipsychotic -> curmeds [lhead=cluster0];
+}
+//includeAntipsy -> olanzapine ; 
+
+//----------------------------------------------------------------------------------------------------------
+
+subgraph cluster0 {
+	edge [style= invis];
+	fontsize="16.0";
+	style=filled;
+	ranksep=equally;
+	curmeds [id=currentmedsnode label="Current Medication?", shape="box", style=filled, color=lightgrey, URL=placeholder];
+	lithium [id=lithium label="Lithium", URL=placeholder];
+	anticonvulsants [id=anticonvulsants label="Anticonvulsants", URL=placeholder];
+	quetiapine [id=quetiapine label="Quetiapine", URL=placeholder];
+	olanzapine        [id=olanzapine label="Olanzapine, OFC,\nAntidepressant", URL=placeholder];
+	nomoodstab      [id=nomoodstab label="No Mood\nStabilizer", URL=placeholder];
+	curmeds -> olanzapine -> anticonvulsants ->  quetiapine ->  nomoodstab  ->lithium;
+}
+
+
+taperolanz  [id=taperolanz label="Taper/DC\n", URL=placeholder];
+optimize [id=optimized label="Optimize", URL=placeholder];
+triedli [id=triedli label="Tried Lithium?", style=filled, URL=placeholder];
+startlithium [id=startlithium label="Start and/or\nOptimize\nLithium", URL=placeholder];	
+partialresponse2 [id=partialresponse2 shape=ellipse label="Partial\n Response?", URL=placeholder];	
+
+
+nomoodstab-> triedli [constraint=false ];
+triedli -> startlithium [label="No", constraint=true];
+triedli -> trylaorquet [ label="yes", constraint=true];
+lithium -> startlithium [constraint=false , constraint=true]; 
+olanzapine -> taperolanz [constraint=true];
+ 
+
+
+taperolanz -> triedli [ constraint=true];
+anticonvulsants -> optimize [ constraint=true]; //controls left/right display
+quetiapine -> optimize [constraint=false];
+optimize -> partialresponse2 [constraint=true];
+partialresponse2 -> triedli [constraint=true];
+
+//-------------------------------------------------------------------------------
+
+trylaorquet [id=trylaorquet label="Tried Lamotrigine\nor Quetiapine?", style=filled, URL=placeholder];
+trylaorquet2 [id=trylaorquet2, label="Tried\n Both?", style=filled, URL=placeholder];
+trylorm      [id="trylorm", label="Try Either\n Lamotrigine\n or Quetiapine"  URL=placeholder]; 
+rapidcycler    [id=rapidcycler label="Rapid\nCycler?", style=filled, URL=placeholder];
+lamqeach	 [id=lamqeach label="Try the Other\n(Lamotrigine or\n Quetiapine)", URL=placeholder];
+highswitchrisk [id=highswitchrisk label="High\nSwitch Risk?", style=filled, URL=placeholder];
+triedantidepr [id=triedantidepr label="Tried\nAntidepressants?", style=filled, URL=placeholder];
+antidepmstab [id=antidepmstab label="Add Antidepressant\n to Mood Stabilizer", URL=placeholder];
+triedcombosofms [id=triedcombosofms label="Tried Combined\nMood Stabilizers?", style=filled, URL=placeholder];
+avoidantid   [id=avoidantid label="Avoid\nAntidepressants", URL=placeholder];
+ectetc       [id=ectect label="ECT,\nOther Strategies", URL=placeholder];
+mstabquet    [id=mstabquet label="Mood Stabilizer\n Combinations\n with or without\n Quetiapine", URL=placeholder];
+
+trylaorquet -> trylaorquet2[label="Yes"];
+trylaorquet -> trylorm [label= "No"];
+trylaorquet2-> rapidcycler [label= "Yes"];
+trylaorquet2-> lamqeach [label= "No"];
+
+
+
+rapidcycler -> avoidantid [label="Yes"];
+rapidcycler -> highswitchrisk [label="No"];
+avoidantid -> triedcombosofms;
+highswitchrisk -> triedantidepr [label="No", constraint=false];
+highswitchrisk -> avoidantid [label="Yes"];
+triedantidepr -> antidepmstab [label="No"];
+triedantidepr -> triedcombosofms [label="Yes"];
+triedcombosofms -> mstabquet [label="No"];
+triedcombosofms -> ectetc [label="Yes"];
+
+}

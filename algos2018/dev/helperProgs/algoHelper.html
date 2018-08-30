@@ -1,0 +1,124 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<LINK REL="STYLESHEET" HREF="../css/algo.css">
+<script type="text/javascript" src="algoHelper.js"></script>
+<title>Algorithm Helpers</title>
+</head>
+<body onload="init()">
+
+<h2>Algorithm Helper Functions</h2>
+<p><br />
+<input type="button" onClick="help()"  value="Help" />
+</p>
+
+<h2> Edit Algorithm Text</h2>
+<p>The Help button above has more extensive help. </p>
+<p>The text for  algorithms is edited and stored in Joomla. Joomla is a free, community developed content management system. Development is done on the 
+Joomla algo.dev database. The live database is the version Web users see.To access the development version on the web use: 
+<a href="http://psychopharm.mobi/docrootAlgo/dev/" target="_top">http://psychopharm.mobi/docrootAlgo/dev/</a></p>
+<p>To see the explanation articles for one algorithm click the Joomla Content/Article Manager section (in the menu bar). Click the 'Search Tools'
+button and select the algo you want to work on. Open and edit any article there. To add a new article click the New button. The title you give will be 
+shown at the top of the article. To give the new article the correct alias which attaches it to the flowchart, open the flowchart in the dev version 
+(Firefox or Google Chrome but not Microsoft) and 
+hold your cursor over the node you want the new article to be attached to. You will see a popup window in the lower left corner of the screen 
+saying &quot;javascript:jump('[alias]....&quot;. 
+Use the word in the [alias] position as the alias for your article. Do not capitalize it or include any spaces. Changes and new articles will appear
+in the dev version of the algorithm after you save the changes and refresh your browser. Usually it is not necessary to clear the cache. 
+The assigned alias can also be seen in Joomla by following the steps below under Process a Flowchart Image Map/ Next step. Do not change 
+the alias in that area because future uploads of the image map will then break the connections.<br />
+</p>
+<p><a href="http://psychopharm.mobi/joomla/administrator/index.php">Joomla Editor</a>
+  </p>
+<p>&nbsp;</p>
+
+
+
+
+
+<form enctype="multipart/form-data" action="http://psychopharm.mobi/docrootAlgo/dev/helperProgs/algoHelper.php" onsubmit="return checkGIFUpload()" method="post">
+
+  <input type="hidden" name="task" id="task" value="uploadGIF" />
+
+
+<h2>Upload a Flowchart</h2>
+<p>Upload new flowchart .gif File. </p>
+<p>    <label for="file">Choose the .gif file to upload (does not have to be [aliasname].gif):</label>
+<input id="gifFile" name="gifFile" type="file" value=".gif" /> 
+  </p>
+  <p>
+    Alias (short name) of the algorithm that uses this flowchart:
+    <input type="text" name="aliasGIF" id="aliasGIF" />   
+    (The alias is specified in Joomla when the category with that alias is created. It also shows next to the title of any article in Articles Manager section of Joomla.)<br>
+    <br>
+    <input type="submit"  value="Upload Flowchart" />
+  </p>
+  <p><strong>Next Step:</strong> The flowchart will be in the folder: /psychopharm.mobi/docrootAlgo/dev/images</p>
+  <br>
+</form>
+
+
+
+
+<form enctype="multipart/form-data" action="http://psychopharm.mobi/docrootAlgo/dev/helperProgs/algoHelper.php" onsubmit="return checkForm2()" method="post">
+<h2>Process a Flowchart Image Map</h2>
+
+  <input type="hidden" name="task" id="task" value="mapProc" />
+  <br>
+    Alias (short name) of the algorithm that uses this map:
+    <input type="text" name="aliasMaps" placeholder="Alias">
+    <br>
+    <br>  
+  
+  The flowchart's image map  needs to be processed after changes are made in the flowchart which affect the position of the nodes or their IDs. The map  tells the program which node has been clicked so it can display the correct explaination text.
+  <p> To create the imap click "Choose file" and go to the location of the [algo alias].cmapx file produced by Gvedit and select it. Then click the Process Map button. If the processing succeeds a new page will appear showing the text which was saved in Joomla. <br />
+    <br>
+    <label for="file">Choose the .cmapx file to upload:</label>
+<input name="uploadedfile2" type="file" /> 
+  </p>
+  <p>
+
+    <input type="submit" value="Process Map" />
+  </p>
+  <p><strong>Next Step</strong>: The imap is stored in Joomla/Category Manager/[Algorithm Name]/Description area. No text is visible in the  Description area until you click the HTML icon to show the raw HTML.The text in that area is confirmation that the imap was created and stored. You do not need to do anything to it. It is placed in the Joomla category section under the algorithm with the alias you entered. </p>
+  <p><strong>Problems:</strong>  If a link does not work the most likely cause is that the &quot;ID&quot; in the imap does not match the alias of the  article which it should display.<br>
+</p>
+</form>
+
+
+
+
+
+
+<form enctype="multipart/form-data" action="http://psychopharm.mobi/docrootAlgo/dev/helperProgs/algoHelper.php" onsubmit="return checkForm()" method="post">
+  <h2>&nbsp;</h2>
+  <h2>References Processor</h2>
+  <input type="hidden" name="task" id="task" value="procRefs" />
+    
+  To export your references from  EndNote open the  library. <br />
+    1.Select File/Export from the main menu <br />
+    2. Set the file name to refs.txt <br />
+    3. Set Save As type to &quot;Text File (*.txt)&quot; <br />
+    4. If your version of EndNote offers an "Output Style" option select "Show all fields"<br />
+    5. Uncheck &quot;Export Selected References&quot; <br />
+    6. Click Save <br />
+    7. If it warns about overwriting an existing file say yes to overwrite.<br />
+    <br>
+     <br>
+    Alias (short name) of the algorithm that uses these references:
+    <input type="text" name="aliasRefs"  placeholder="Alias" />   
+<br>
+    Navigate to the refs.txt file you created and select it for upload:
+    <input name="uploadedfile" type="file" />
+    <br />
+
+    
+    <br>
+    <br>
+    <input type="submit" onclick="javascript:checkForm();"  value="Send and Process References" />
+  <p>The uploaded file is processed into a database called psychopharm. The table name will be the alias + Refs. Each reference is one line in the table. Articles and referecnces are integrated each time a user requests to see the algorithm. So updating the references here and updating the corresponding article in Joomla is all that is required.</p>
+</form>
+<p>May 29, 2018</p>
+<p>dev/helperProgs/algoHelper.html</p>
+</body>
+</html>

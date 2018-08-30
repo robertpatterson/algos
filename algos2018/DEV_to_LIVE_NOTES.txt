@@ -1,0 +1,31 @@
+
+
+                           Dev to Llive Notes
+
+started 8/27/2018
+
+-----------------CODE FILE CHANGES ----
+
+Rename /docrootAlgo/live to something ...OUT
+copy               /dev to live   (Do not rename file)
+This preserves dev and old live versions
+
+Change docroot/live/common/class/DatabaseConnection.inc.php. 
+In it change algo_dev ->algo_live and psychopharm-dev-> psychopharm_live
+
+In /docroot/live/index.html change line below to 'live'
+	
+	serverLocation: 'dev',  //very important
+
+
+----------------- DATABASE CHANGES ---------------
+
+Copy algo_dev to create algo_live
+Copy psychopharm_dev to  create psychopharm_live
+
+
+Add user 'i502_jos1' to algo_live
+Add user bob to psychopharm_live
+
+Give only Select permission to psychopharm_live
+Give only Select permission to algo_live

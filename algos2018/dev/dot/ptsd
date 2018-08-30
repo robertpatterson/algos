@@ -1,0 +1,57 @@
+digraph G {
+graph [ fontsize="12.0"];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+back           [id=goBack label="<-Go Back", fontcolor="red",  URL="javascript:navButton('-')"];
+diagnosis      [label="PTSD Diagnosis?", style=filled, URL=placholder];
+sleepDisturbed   [label="Sleep Disturber?"  style=filled, URL=placeholder];
+considerTrazodone      [label="Consider Trazodone" URL=placeholder];
+triedPrazosin       [label="Tried Prazosin?", style=filled, URL=placeholder];
+givePrazosin       [label="Give Prazosin" URL=placeholder];
+triedSSRI           [label="Tried SSRI?",style=filled,  URL=placeholder];
+giveSSRI        [label="Give SSRI" URL= placeholder];
+
+tried2ndSSRI [label="Tried Second\n SSRI, SNRI\n or Mirtazapine?", style=filled, URL=placeholder];
+considerAugmentation [label="Consider Augmentation" style=filled URL=placeholder];
+tryAntipsychotic [label="Try Antipsychotic" URL=placeholder]; 
+try2ndSSRI [label="Try One" URL=placeholder];
+try3rdSSRI [label="Try Third\n SSRI,SNRI\n or Mirtazapine" URL=placeholder];
+
+subgraph cluster0 {
+	edge [style= invis];
+	fontsize="16.0";
+tryHyperList [label="Try Antipsychotic,\n Clonidine,\n Phenalzine,\n Possabily Valproate"  URL=placeholder];
+try2ReExList [label="Try Antipsychotic,\n Topiramate,\n possibly Valproate"  URL=placeholder];
+tryAvoidanceList [label="Lamotrigine,\n Possibly Valproate" URL=placeholder];
+tryOtherList [label="Try Antipsychotic,\n TMS" URL=placeholder];
+
+tryHyperList ->try2ReExList->tryAvoidanceList->tryOtherList; 
+}
+diagnosis -> sleepDisturbed;
+sleepDisturbed-> triedPrazosin [label="Nightmares\n or night-time\n Hyperarousal"];
+sleepDisturbed-> considerTrazodone [label="Only at\n Sleep\n Initiation"];
+sleepDisturbed-> triedSSRI [label="No"];
+considerTrazodone  -> triedSSRI;
+triedPrazosin -> givePrazosin [label="No"];
+triedPrazosin -> considerTrazodone [label="Yes but..."];
+givePrazosin -> triedSSRI [label="Symptoms\n Remain"]; 
+triedSSRI -> giveSSRI [label="No"];       
+ 
+  
+giveSSRI -> tried2ndSSRI [label="No Response;\n No Psychosis"];      
+giveSSRI -> ConsiderAugmentation [label="Partial Response;\n No Psychosis"]; 
+giveSSRI -> tryAntipsychotic [label="No Response;\n Psychosis Present"]; 
+tryAntipsychotic -> considerAugmentation [label="Symptoms Remain"];
+
+tried2ndSSRI -> try2ndSSRI [label="No"];
+tried2ndSSRI -> try3rdSSRI [label="Yes With\n No Response"];
+tried2ndSSRI -> considerAugmentation [label="Partial\n Response"];
+try3rdSSRI -> considerAugmentation [label="Partial Response"];
+considerAugmentation -> tryHyperList [label="Hyperarousal\n Symptoms"]; 
+considerAugmentation -> try2ReExList [label="Re-experiencing\n Symptoms"]; 
+considerAugmentation -> tryAvoidanceList [label="Avoidance\n Symptoms"]; 
+considerAugmentation -> tryOtherList [label="Other\n Symptoms"]; 
+
+

@@ -1,0 +1,16 @@
+5/20/2018
+
+
+
+Joomla puts info into the algo_dev copy of the database
+AlgoHelper program puts stuff in Joomla algo_dev and psychopharm_dev database.
+
+Copy algo_dev and psychopharm_dev to algo_live and psychopharm._live databases to go live.
+
+Location specific infor is in the:
+
+/common/class/databaseConnections file  -- do not overwrite the copy in /live when new versiopn sent to live
+
+and
+
+/docrootAlgo/[dev/live]/index.html  -- do not overwrite the copy in /live when new versiopn sent to live

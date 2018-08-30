@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<LINK REL="STYLESHEET" HREF="../css/algo.css">
+<script type="text/javascript" src="refHelper.js"></script>
+<title>Ref Processor</title>
+
+</head>
+
+<body onload="init()">
+<br><br>
+<h2>References Processor</h2>
+
+<form enctype="multipart/form-data" action="http://psychopharm.mobi/dev/php/refProcessor.php" onsubmit="return checkForm()" method="post">
+  <input type="hidden" name="task" id="task" value="procRefs" />
+
+<br>
+To export your references from  EndNote select all the references in the library window. Click File/Export. Export it as a .txt type file. Name the file refs.txt<br />
+<br>
+
+<!--<input type="hidden" name="MAX_FILE_SIZE" value="200000" /> -->
+Choose the refs.txt file to upload: 
+<input id="uploadedfile" name="uploadedfile" type="file" /><br />
+
+
+
+<br><br><br>
+Alias (short name) of the algorithm that uses these references: 
+  <input type="text" name="alias" id="alias" />
+
+<br>
+<br>
+  <input type="submit" onclick="javascript:checkForm();"  value="Send and Process References" />
+</form>
+</body>
+</html>
