@@ -3,6 +3,7 @@
 // rdp 3/31/2013
 // database
 
+
 define('ENVIRONMENT', 'i502_jos1');
 define('ENVIRONMENT2', 'psychopharm');
 define('PHASE', 'algo_dev');
