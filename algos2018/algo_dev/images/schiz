@@ -1,0 +1,52 @@
+digraph G {
+graph [ fontsize="12.0"];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+subgraph group1{
+
+diagnosis       [id=diagnosis label="Schizophrenia Diagnosis?",  URL=placholder];
+comorbids       [id=comorbids label="Consider comorbid conditions:\n Suicidality, Aggressiveness\nAgitation, Negative symptoms,\n Major depression Childbearing potential,\n Substance abuse, Cardiac disease,\n Old age.",  URL=placholder];
+firstepi1      [id=firstepi1 label="First Episode/First Trial?" URL=placeholder];
+tryforfirstepi  [id=tryforfirstepi label="First Line: Try second generation\n antpsychotic but not clozapine,\n olanzapine or quetiapine", style=filled, URL=placeholder];
+unsatresponse2 [id=unsatresponse2 label="Second Line: Tried risperidone,\n olanzapine or a first generation\n antipsychotic (FGA)?",style=filled, URL=placeholder];
+adequatetrial   [id=adequatetrial label="Poor tolerance and\nadequate trial defined", URL=placeholder];
+poortol1a      [id=poortol1a label="Try an alternative\n first line drug", style=filled,  URL=placeholder];
+poortol2a      [id=poortol2a label="Try one of these,\n else any SGA or FGA", style=filled,  URL=placeholder];
+unsatresponse3 [id=unsatresponse3 label="Third Line: Transition to\n clozapine monotherapy", style=filled, URL=placeholder];
+unsatresponse4 [id=unsatresponse4 label="Try adding risperidone\n(see text), lamotrigine or ECT", style=filled, URL=placeholder];
+
+}    
+
+
+
+subgraph cluster0 {
+	edge [style= invis];
+	fontsize="16.0";
+	style=filled;
+	ranksep=equally;
+	tryalts [id=tryalts label="Try these in any order.\n If not on clozapine try the\n no-clozapine approaches. ", shape="box", style=filled, color=lightgrey, URL=placeholder];
+trya         [id=trya label="Keep clozapine, try\n one of the two other\n augmentations\nor ECT",style=filled,  URL=placeholder];
+tryb         [id=tryb label="Keep clozapine, add\n memantine\n or omega3s",style=filled,  URL=placeholder];
+tryc         [id=tryc label="No clozapine. Try\n another antipsychotic\nmonotherapy e.g.\naripiprazole",style=filled,  URL=placeholder];
+tryd         [id=tryd label="No clozapine. Try\n combination of\n FGA + mirtazapine\n or SGA + celecoxib",style=filled,  URL=placeholder];
+trye         [id=trye label="No clozapine. Try\n other antipsychotic\n combinations",style=filled,  URL=placeholder];
+	tryalts -> trya -> tryb ->  tryc ->  tryd  ->trye;
+}
+
+
+diagnosis -> comorbids; 
+comorbids -> firstepi1;
+firstepi1 -> tryforfirstepi [label="Yes"];
+firstepi1 -> unsatresponse2 [label="No"];
+tryforfirstepi -> adequatetrial; 
+adequatetrial -> unsatresponse2 [label="Adequate trial but\n unsatisfactory\n response"];
+unsatresponse2 -> unsatresponse3[label="Yes - adequate trial but\n unsatisfactory response"];
+unsatresponse2 -> poortol2a [label="No, or poorly tolerated\nor inadequate trial"];
+adequatetrial -> poortol1a [label="Poorly tolerated\nor inadequate trial"];
+unsatresponse3 -> unsatresponse4  [label="Adequate trial\n but unsatisfactory\n response"];
+unsatresponse3 -> tryalts  [label="Unable to complete\n a trial of clozapine"];
+unsatresponse4  -> tryalts [label="Adequate trial\n but unsatisfactory\n response"];
+
+}

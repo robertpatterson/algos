@@ -1,0 +1,36 @@
+digraph G {
+graph [ fontsize="12.0"];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+//subgraph group1{
+
+diagnosis       [id=diagnosis label="Diagnosis of Major\nDepression (Psychotic)?",  URL=placholder];
+severe       [id=severe label="If severely ill is\nECT an option?",  URL=placholder];
+tryect      [id=tryect label="Try\nECT",  style=filled, URL=placeholder];
+combos  [id=combos label="Tried TCA or SSRI\nwith antipsychotic?",  URL=placeholder];
+combono [id=combono label="Try one",style=filled, URL=placeholder];
+combofailed1   [id=combofailed1 label="Try the other antidepressant \nclass or reconsider ECT", style=filled, URL=placeholder];
+combofailed2      [id=combofailed2 label="Reconsider ECT.\nTried adding lithium?",   URL=placeholder];
+noantipsy      [id=noantipsy label="Tried TCA (e.g. imipramine)\nor certain SSRIs?",  URL=placeholder];
+addli [id=addli label="Add\nlithium", style=filled, URL=placeholder];
+clozapine [id=clozapine label="Reconsider ECT\nand other options\n(e.g. clozapine)", style=filled, URL=placeholder];
+
+trycombo2 [id=trycombo2 label="Try\none", style=filled, URL=placeholder];
+addantipsy [id=addantipsy label="Reconsider adding\nan antipsychotic\nor using ECT", style=filled, URL=placeholder];
+
+//}    
+
+diagnosis -> severe  [label="Yes"]; 
+severe -> tryect  [label="Yes"];
+severe -> combos [label="No. Tried ECT,\nmilder illness or\nECT unacceptable"];
+combos -> combono [label="No"];
+combos -> combofailed1 [label="Yes\nFailed one\ncombiation"] 
+combos -> combofailed2 [label="Yes\nFailed both\ncombiations"] 
+combos -> noantipsy [label="No. Prefer to avoid\nantipsychotics"] 
+combofailed2 -> addli [label="No"];
+combofailed2 -> clozapine[label="Yes"];
+noantipsy -> trycombo2 [label="Nol"];
+noantipsy -> addantipsy [label="Yes"];
+}

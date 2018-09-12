@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="diagnosis" href="placholder" title="Diagnosis of Major\nDepression (Psychotic)?" alt="" coords="128,5,359,56"/>
+<area shape="rect" id="severe" href="placholder" title="If severely ill is\nECT an option?" alt="" coords="166,124,321,175"/>
+<area shape="rect" id="tryect" href="placeholder" title="Try\nECT" alt="" coords="154,283,226,333"/>
+<area shape="rect" id="combos" href="placeholder" title="Tried TCA or SSRI\nwith antipsychotic?" alt="" coords="251,283,433,333"/>
+<area shape="rect" id="combono" href="placeholder" title="Try one" alt="" coords="5,443,92,491"/>
+<area shape="rect" id="combofailed1" href="placeholder" title="Try the other antidepressant \nclass or reconsider ECT" alt="" coords="116,441,379,492"/>
+<area shape="rect" id="combofailed2" href="placeholder" title="Reconsider ECT.\nTried adding lithium?" alt="" coords="403,441,601,492"/>
+<area shape="rect" id="noantipsy" href="placeholder" title="Tried TCA (e.g. imipramine)\nor certain SSRIs?" alt="" coords="625,441,881,492"/>
+<area shape="rect" id="addli" href="placeholder" title="Add\nlithium" alt="" coords="346,570,421,621"/>
+<area shape="rect" id="clozapine" href="placeholder" title="Reconsider ECT\nand other options\n(e.g. clozapine)" alt="" coords="445,560,613,631"/>
+<area shape="rect" id="trycombo2" href="placeholder" title="Try\none" alt="" coords="690,570,762,621"/>
+<area shape="rect" id="addantipsy" href="placeholder" title="Reconsider adding\nan antipsychotic\nor using ECT" alt="" coords="787,560,969,631"/>
+</map>

@@ -1,0 +1,129 @@
+// 4/28/18 version  updated 5/2/18
+// https://dreampuf.github.io/GraphvizOnline/
+ 
+digraph G {
+graph [ fontsize="12.0" ];
+compound=true;
+node [shape=box, fontname="Arial", style=bold];
+edge [shape=box, fontname="Arial", style=bold];
+
+
+warn           [id=warn label="Development Version May 2018\lThis algorithm, presented at the 2018\lannual meeting of the American\lPsychiatric Association, is in development.\lYour ideas for the authors will be\lappreciated at dno@theworld.com. Clicking\lthe nodes in this version does not yet show \nexplanatory text or references.\l",  fontcolor="red", style=rounded,  URL="javascript:navButton('-')"]
+
+
+// ---------------------- deal with comorbidities ---------------------------------------------
+
+adhd               [id=adhd label="Diagnosis of\nADHD in an adult?", style=filled, style=rounded,URL=placholder];
+gaucomaContra        [id=glaucomaContra label="Absolute contraindication to stimulants or atomoxetine:\n  angle closure glaucoma - Can't use this algorithm.\n Contraindications that require treatment first:\nother glaucomas, pheochromocytoma",style=filled, style=rounded, URL=placeholder];
+medTreat         [id=medTreat label=" Relative contraindications for stimulants\n or atomoxetine (get medical clearance\n before using): Other glaucoma,\n hypertension, angina, family or personal\n history of cardiovascular defects",style=filled, style=rounded, URL=placeholder];
+
+comorbidPsych          [id=comorbidPsych label="Address comorbidities that require special attention.", style=filled, 			style=rounded,URL=placholder];
+
+
+
+/*comorbidPsych          [id=comorbidPsych label="Comorbidity with substance use disorders\n (SUDs), psychosis or bipolar disorder?", style=filled, 			style=rounded,URL=placholder];  */
+treatPsych       [id=treatPsych label="Stabilize patient on a mood\n stabilizer, e.g., lithium", style=filled, style=rounded,URL=placholder];
+childbearing         [id=childbearing label="Among women of childbearing age\nconsider benefits and risks to fetus and\n mother, and breastfeeding plans", style=filled, 				style=rounded,URL=placholder];
+riskPotential          [id=riskPotential label="Severity of\n SUDs?", style=filled, style=rounded,URL=placholder];
+
+highSUD        [id=jighSUD label="Prioritize SUDs\n treatment and\n establish period\n of sobriety first", style=filled, style=rounded,URL=placholder];
+ 
+
+
+
+adhd -> gaucomaContra [label="Yes"];
+gaucomaContra -> medTreat [label="Not present"];
+
+
+
+
+medTreat -> childbearing [label="Treated or not present"];
+
+
+comorbidPsych ->treatPsych [label="Bipolar"];
+comorbidPsych ->riskPotential [label="SUDs"];
+
+comorbidPsych ->psychosis [label="Psychosis"];
+comorbidPsych ->tryStimulents [label="None"];
+
+childbearing ->comorbidPsych [label="Considered"];
+treatPsych ->tryStimulents[label="Done" , lhead=cluster1];
+riskPotential -> highSUD [label="High"];
+riskPotential -> cocaine [label="Mild or Moderate", lhead=cluster1];
+
+
+//---------------------------------------- Main treatment path ------------------------------------------------------
+
+
+tryStimulents          [id=tryStimulents label="Try methylphenidate (MPH) or\n amphetamine. Titrate over 1-4 weeks.\n MPH dose 1-1.3 mg/kg/day or\namphetamine 0.5-0.65 mg/kg/day\n for maximum effectiveness", style=filled, style=rounded,URL=placholder];
+
+tryAnotherStim               [id=tryAnotherStim label="Try another stim-\nulant for 4 weeks", style=filled, style=rounded,URL=placholder];
+tryATMX               [id=tryATMX label="Consider trying\natomoxetine", style=filled, style=rounded,URL=placholder];
+misuse_1     	[id=misuse_1 label="Consider ER\nformulations", style=filled, style=rounded,URL=placholder];
+misuse_2     	[id=misuse_2 label="Consider\n atomoxetine", style=filled, style=rounded,URL=placholder];
+
+psychosis     	[id=misuse_2 label="Usually avoid stimulants\n and atomoxetine", style=filled, style=rounded,URL=placholder];
+
+
+
+tryStimulents -> misuse_1 [label="Misuse or\ndiversion"];
+misuse_1 ->misuse_2  [label="Further\nmisuse or\ndiversion"];
+
+tryStimulents -> tryAnotherStim [label=" Inadequate\nresponse"];
+tryAnotherStim -> tryATMX [label=" Inadequate\nresponse"];
+
+
+allFailed	 [id=allFailed label="If all this fails:\n other options, all with\n low likelihood of benefit:\n quanfacine,\n bupropion,\ndesipramine,\n venlafaxine,\nclonidine. \nSee text for details", style=filled, style=rounded,URL=placholder];
+/*
+{
+	rank= same;
+		"misuse_1";
+		"allFailed";
+		
+}
+*/
+
+highSUD->allFailed [style="invis"];
+
+
+//--------------- SUDS Section ------------------------
+
+subgraph cluster1{
+ fontsize="14.0" ;
+ fontname="Arial";
+ style=bold;
+id=cluster1
+cocaine               [id=cocaine label="Cocaine", style=filled, style=rounded,URL=placholder];
+alcohol               [id=alcohol label="Alcohol", style=filled, style=rounded,URL=placholder];
+mph               [id=mph label="Metham-\nphetamine", style=filled, style=rounded,URL=placholder];
+other               [id=other label="Other", style=filled, style=rounded,URL=placholder];
+
+{rank = same; cocaine, cocDrug}
+{rank = same; alcohol, alcDrug}
+{rank = same; mph, mphDrug}
+{rank = same; other, othDrug}
+
+}
+
+cocDrug               [id=cocDrug label="ER amphetamine\n salts", style=filled, style=rounded,URL=placholder];
+alcDrug               [id=alcDrug label="Atomoxetine", style=filled, style=rounded,URL=placholder];
+mphDrug               [id=mphDrug label="OROS MPH", style=filled, style=rounded,URL=placholder];
+othDrug               [id=othDrug label="Extended release\nstimulants", style=filled, style=rounded,URL=placholder];
+
+cocaine -> alcohol  [style=invis];
+alcohol -> mph  [style=invis];
+mph -> other  [style=invis];
+
+
+
+cocaine -> cocDrug [label="Try"];
+alcohol -> alcDrug [label="Try"];
+mph -> mphDrug [label="Try"];
+other -> othDrug [label="Try"];
+
+
+
+
+
+
+}

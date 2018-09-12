@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="diagnosis" href="placholder" title="Diagnosis of Generalized\n Anxiety Disorder" alt="" coords="183,5,418,56"/>
+<area shape="rect" id="node2" href="placholder" title="Tried an SSRI?" alt="" coords="224,124,377,172"/>
+<area shape="rect" id="node2a" href="placeholder" title="Is the partial response\n due to non&#45;pharmacologic\n aspects of care?" alt="" coords="5,260,252,331"/>
+<area shape="rect" id="node3" href="placeholder" title="Tried a second SSRI,\n venlafaxine, mirtazapine,\nlorazepam or phenelzine?" alt="" coords="181,459,420,529"/>
+<area shape="rect" id="tryssri" href="placeholder" title="Try an SSRI" alt="" coords="410,271,535,319"/>
+<area shape="rect" id="augmentbuspirone" href="placeholder" title="Consider\n augmenting\n with buspirone" alt="" coords="9,459,157,529"/>
+<area shape="rect" id="node3no" href="placeholder" title="Try one\n of them" alt="" coords="227,607,318,658"/>
+<area shape="rect" id="node4" href="placeholder" title="Tried a third drug: SSRI,\n venlafaxine, clonazepam,\n phenelzine or nafazodone?" alt="" coords="343,597,597,668"/>
+<area shape="rect" id="node5" href="placeholder" title="Untried options above and\n experimental options e.g.\n gabapentin, pregabalin, tiagabine,\n quetiapine, risperidone " alt="" coords="205,736,514,827"/>
+<area shape="rect" id="node6" href="placeholder" title="Try one" alt="" coords="539,757,625,805"/>
+</map>

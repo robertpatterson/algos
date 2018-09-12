@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="placholder" title="Met criteria for DSM&#45;5 diagnosis of GAD" alt="" coords="5,97,367,145"/>
+<area shape="rect" id="node1a" href="placeholder" title="Consider these at each node:\nInsomnia\nSubstance use disorders\nWomen of childbearing potential\n Pregnant women\nElderly\nNeuropathic pain\nMajor depression\nBipolar depression\nBipolar mania\nPosttraumatic stress disorder" alt="" coords="391,5,685,236"/>
+<area shape="rect" id="node2" href="placholder" title="Adequate trial of SSRI?" alt="" coords="709,97,932,145"/>
+<area shape="rect" id="node3" href="placeholder" title="Tried second SSRI\n or duloxetine?" alt="" coords="489,354,675,405"/>
+<area shape="rect" id="node4" href="placeholder" title="Try an SSRI or consider\n duloxetine or less favored\n options buspirone,\n hydroxyzine, pregabalin\n or bupropion" alt="" coords="699,324,943,435"/>
+<area shape="rect" id="node5" href="placeholder" title="Augment with: hydroxyzine,\n pregabalin or benzodiazepine.\n (No second generation\n antipsychotic until third trial.)" alt="" coords="793,689,1073,779"/>
+<area shape="rect" id="node6" href="placeholder" title="Try another SSRI or duloxetine, or\n the alternatives buspirone, hydroxyzine,\n pregabalin, bupropion, benzodiazepine,\n venlafaxine, agomelatine (not available in US),\n kava, rhodiola rosea or lavender oil\n (No second generation antipsychotic until third trial.)" alt="" coords="293,877,751,1008"/>
+<area shape="rect" id="node7" href="placeholder" title="Tried SNRI?" alt="" coords="574,523,702,571"/>
+<area shape="rect" id="node8" href="placeholder" title="Try an SNRI,\n other alternatives (below),\n quetiapine or risperidone\n (Other SGAs have not been\n adequately studied.\n Avoid olanzapine.),\n valproate" alt="" coords="508,659,768,809"/>
+</map>

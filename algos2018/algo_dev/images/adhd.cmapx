@@ -1,0 +1,26 @@
+<map id="G" name="G">
+<area shape="rect" id="warn" href="javascript:navButton(&#39;-&#39;)" title="Development Version May 2018\lThis algorithm, presented at the 2018\lannual meeting of the American\lPsychiatric Association, is in development.\lYour ideas for the authors will be\lappreciated at dno@theworld.com. Clicking\lthe nodes in this version does not yet show \nexplanatory text or references.\l" alt="" coords="5,5,393,176"/>
+<area shape="rect" id="adhd" href="placholder" title="Diagnosis of\nADHD in an adult?" alt="" coords="418,65,594,116"/>
+<area shape="rect" id="glaucomaContra" href="placeholder" title="Absolute contraindication to stimulants or atomoxetine:\n &#160;angle closure glaucoma &#45; Can&#39;t use this algorithm.\n Contraindications that require treatment first:\nother glaucomas, pheochromocytoma" alt="" coords="267,244,745,335"/>
+<area shape="rect" id="medTreat" href="placeholder" title=" Relative contraindications for stimulants\n or atomoxetine (get medical clearance\n before using): Other glaucoma,\n hypertension, angina, family or personal\n history of cardiovascular defects" alt="" coords="327,403,685,513"/>
+<area shape="rect" id="childbearing" href="placholder" title="Among women of childbearing age\nconsider benefits and risks to fetus and\n mother, and breastfeeding plans" alt="" coords="330,581,682,652"/>
+<area shape="rect" id="comorbidPsych" href="placholder" title="Address comorbidities that require special attention." alt="" coords="277,720,735,768"/>
+<area shape="rect" id="treatPsych" href="placholder" title="Stabilize patient on a mood\n stabilizer, e.g., lithium" alt="" coords="293,836,543,887"/>
+<area shape="rect" id="riskPotential" href="placholder" title="Severity of\n SUDs?" alt="" coords="567,836,679,887"/>
+<area shape="rect" id="misuse_2" href="placholder" title="Usually avoid stimulants\n and atomoxetine" alt="" coords="703,836,925,887"/>
+<area shape="rect" id="tryStimulents" href="placholder" title="Try methylphenidate (MPH) or\n amphetamine. Titrate over 1&#45;4 weeks.\n MPH dose 1&#45;1.3 mg/kg/day or\namphetamine 0.5&#45;0.65 mg/kg/day\n for maximum effectiveness" alt="" coords="65,955,408,1065"/>
+<area shape="rect" id="jighSUD" href="placholder" title="Prioritize SUDs\n treatment and\n establish period\n of sobriety first" alt="" coords="481,965,643,1055"/>
+<area shape="rect" id="cocaine" href="placholder" title="Cocaine" alt="" coords="683,986,775,1034"/>
+<area shape="rect" id="allFailed" href="placholder" title="If all this fails:\n other options, all with\n low likelihood of benefit:\n quanfacine,\n bupropion,\ndesipramine,\n venlafaxine,\nclonidine. \nSee text for details" alt="" coords="431,1153,661,1344"/>
+<area shape="rect" id="tryAnotherStim" href="placholder" title="Try another stim&#45;\nulant for 4 weeks" alt="" coords="25,1223,189,1274"/>
+<area shape="rect" id="misuse_1" href="placholder" title="Consider ER\nformulations" alt="" coords="214,1223,345,1274"/>
+<area shape="rect" id="alcohol" href="placholder" title="Alcohol" alt="" coords="693,1225,778,1273"/>
+<area shape="rect" id="cocDrug" href="placholder" title="ER amphetamine\n salts" alt="" coords="826,985,994,1035"/>
+<area shape="rect" id="tryATMX" href="placholder" title="Consider trying\natomoxetine" alt="" coords="33,1452,182,1503"/>
+<area shape="rect" id="misuse_2" href="placholder" title="Consider\n atomoxetine" alt="" coords="214,1452,345,1503"/>
+<area shape="rect" id="mph" href="placholder" title="Metham&#45;\nphetamine" alt="" coords="683,1452,793,1503"/>
+<area shape="rect" id="alcDrug" href="placholder" title="Atomoxetine" alt="" coords="830,1225,958,1273"/>
+<area shape="rect" id="other" href="placholder" title="Other" alt="" coords="699,1553,771,1601"/>
+<area shape="rect" id="mphDrug" href="placholder" title="OROS MPH" alt="" coords="845,1453,970,1501"/>
+<area shape="rect" id="othDrug" href="placholder" title="Extended release\nstimulants" alt="" coords="823,1552,994,1603"/>
+</map>

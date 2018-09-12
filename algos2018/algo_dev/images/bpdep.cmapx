@@ -1,0 +1,26 @@
+<map id="G" name="G">
+<area shape="rect" id="diagnosis" href="placholder" title="Bipolar Depression?" alt="" coords="137,5,331,53"/>
+<area shape="rect" id="urgentect" href="placeholder" title="Urgent need for ECT?" alt="" coords="129,97,339,145"/>
+<area shape="rect" id="psychotic" href="placeholder" title="Psychotic?" alt="" coords="177,189,291,237"/>
+<area shape="rect" id="includeantipsychotic" href="placeholder" title="Include\nantipsychotic" alt="" coords="97,281,227,332"/>
+<area shape="rect" id="currentmedsnode" href="placeholder" title="Current medication?" alt="" coords="150,367,342,415"/>
+<area shape="rect" id="olanzapine" href="placeholder" title="Olanzapine, OFC,\nantidepressant" alt="" coords="167,440,339,491"/>
+<area shape="rect" id="lithium" href="placeholder" title="Lithium" alt="" coords="187,760,270,808"/>
+<area shape="rect" id="startlithium" href="placeholder" title="Start or optimize\nlithium &#45; level &gt;0.8mEqL" alt="" coords="117,861,341,912"/>
+<area shape="rect" id="anticonvulsants" href="placeholder" title="Anticonvulsants" alt="" coords="176,516,329,564"/>
+<area shape="rect" id="quetiapine" href="placeholder" title="Quetiapine or lurasidone" alt="" coords="115,589,342,637"/>
+<area shape="rect" id="optimized" href="placeholder" title="Optimize" alt="" coords="392,589,489,637"/>
+<area shape="rect" id="nomoodstab" href="placeholder" title="No mood\nstabilizer" alt="" coords="179,673,279,724"/>
+<area shape="rect" id="taperolanz" href="placeholder" title="Taper/DC\n" alt="" coords="440,516,545,564"/>
+<area shape="rect" id="triedli" href="placeholder" title="Tried lithium?" alt="" coords="415,760,549,808"/>
+<area shape="poly" id="partialresponse2" href="placeholder" title="Partial\n response?" alt="" coords="531,698,527,687,515,677,497,670,473,664,447,663,421,664,398,670,379,677,368,687,363,698,368,710,379,720,398,727,421,733,447,734,473,733,497,727,515,720,527,710"/>
+<area shape="rect" id="trylaorquet" href="placeholder" title="Tried quetiapine\n lamotrigine and lurasidone?" alt="" coords="365,861,623,912"/>
+<area shape="rect" id="trylaorquet2" href="placeholder" title="In mixed state, history of\n rapid cycling or manic/\nhypomanic on antidepressant?" alt="" coords="141,956,420,1026"/>
+<area shape="rect" id="trylorm" href="placeholder" title="Try quetiapine, lamotrigine\n or lurasidone &#45; until\n all 3 have been tried" alt="" coords="445,956,687,1026"/>
+<area shape="rect" id="rapidcycler" href="placeholder" title="Continue to avoid\n antidepressants" alt="" coords="121,1070,289,1121"/>
+<area shape="rect" id="valproateadjunct" href="placeholder" title="Tried valproate or\n adjunctive antidepressants?" alt="" coords="341,1070,602,1121"/>
+<area shape="rect" id="triedcombosofms" href="placeholder" title="Tried valproate or combination\n involving lithium, quetiapine, lamotrigine,\n lurasidone and valproate?" alt="" coords="5,1165,367,1236"/>
+<area shape="rect" id="ectect" href="placeholder" title="ECT,\n other strategies" alt="" coords="211,1320,369,1370"/>
+<area shape="rect" id="consider" href="placeholder" title="Consider valproate\n or antidepressant" alt="" coords="391,1175,573,1226"/>
+<area shape="rect" id="makesure" href="placeholder" title="If you choose an anti&#45;depressant,\nassure adequate mood stabilizer,\n then try bupropion or (2nd choice)\n an SSRI" alt="" coords="393,1300,704,1390"/>
+</map>

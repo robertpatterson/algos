@@ -1,0 +1,106 @@
+// 6/15/14 version  updated 3/16/16 - fixed yes and no after tried valproate?
+digraph G {
+graph [ fontsize="12.0" ];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+
+subgraph group1{
+depression     [id=diagnosis label="Bipolar Depression?", style=filled,URL=placholder];
+urgentect      [id=urgentect label="Urgent need for ECT?",style=filled, URL=placeholder];
+includeantipsychotic [id=includeantipsychotic label="Include\nantipsychotic", URL=placeholder];
+psychotic      [id=psychotic label="Psychotic?",label="Psychotic?" style=filled URL=placeholder];
+//giveect        [id=giveect label="ECT", URL=placeholder];
+
+depression -> urgentect [label="Yes"];
+//urgentect -> giveect   [label= "Yes"];
+urgentect -> psychotic [label="No"];
+
+psychotic -> includeantipsychotic [label="Yes"];
+psychotic -> curmeds [label="No",lhead=cluster0];
+includeantipsychotic -> curmeds [lhead=cluster0];
+}
+//includeAntipsy -> olanzapine ; 
+
+//----------------------------------------------------------------------------------------------------------
+
+subgraph cluster0 {
+	edge [style= invis];
+	fontsize="16.0";
+	style=filled;
+	ranksep=equally;
+	curmeds [id=currentmedsnode label="Current medication?", shape="box", style=filled, color=lightgrey, URL=placeholder];
+	lithium [id=lithium label="Lithium", URL=placeholder];
+	anticonvulsants [id=anticonvulsants label="Anticonvulsants", URL=placeholder];
+	quetiapine [id=quetiapine label="Quetiapine or lurasidone", URL=placeholder];
+	olanzapine        [id=olanzapine label="Olanzapine, OFC,\nantidepressant", URL=placeholder];
+	nomoodstab      [id=nomoodstab label="No mood\nstabilizer", URL=placeholder];
+	curmeds -> olanzapine -> anticonvulsants ->  quetiapine ->  nomoodstab  ->lithium;
+}
+
+
+taperolanz  [id=taperolanz label="Taper/DC\n", URL=placeholder];
+optimize [id=optimized label="Optimize", URL=placeholder];
+triedli [id=triedli label="Tried lithium?", style=filled, URL=placeholder];
+startlithium [id=startlithium label="Start or optimize\nlithium - level >0.8mEqL", URL=placeholder];	
+partialresponse2 [id=partialresponse2 shape=ellipse label="Partial\n response?", style=filled, URL=placeholder];	
+
+
+nomoodstab-> triedli [constraint=false ];
+triedli -> startlithium [label="No", constraint=true];
+triedli -> trylaorquet [ label="yes", constraint=true];
+lithium -> startlithium [constraint=false , constraint=true]; 
+olanzapine -> taperolanz [constraint=true];
+ 
+//startlithium -> trylaorquet;
+
+taperolanz -> triedli [ constraint=true];
+anticonvulsants -> optimize [ constraint=true]; //controls left/right display
+quetiapine -> optimize [constraint=false];
+optimize -> partialresponse2 [constraint=true];
+partialresponse2 -> triedli [constraint=true];
+
+//-------------------------------------------------------------------------------
+
+trylaorquet [id=trylaorquet label="Tried quetiapine\n lamotrigine and lurasidone?", style=filled, URL=placeholder];
+trylaorquet2 [id=trylaorquet2, label="In mixed state, history of\n rapid cycling or manic/\nhypomanic on antidepressant?", style=filled, URL=placeholder];
+trylorm      [id="trylorm", label="Try quetiapine, lamotrigine\n or lurasidone - until\n all 3 have been tried", style=filled,  URL=placeholder]; 
+rapidcycler    [id=rapidcycler label="Continue to avoid\n antidepressants", URL=placeholder];
+rapidcycler->triedcombosofms
+
+
+triedcombosofms	 [id=triedcombosofms label="Tried valproate or combination\n involving lithium, quetiapine, lamotrigine,\n lurasidone and valproate?", style=filled, URL=placeholder];
+tryvalproate [id="tryvalproate" label="Try valproate or\n combinations"  constraint=true];
+triedcombosofms->ectetc [ label="Yes", constraint=true];
+
+triedcombosofms ->  tryvalproate [ label="No", constraint=true];
+
+
+
+consider  [id=consider label="Consider valproate\n or antidepressant", URL=placeholder, style="filled"];
+consider->makesure  [ constraint=true];
+consider->ectetc [label="If both\n tried"] ;
+makesure  [id=makesure label="If you choose an anti-depressant,\nassure adequate mood stabilizer,\n then try bupropion or (2nd choice)\n an SSRI", URL=placeholder];
+
+
+
+
+
+
+ectetc       [id=ectect label="ECT,\n other strategies", URL=placeholder];
+
+
+
+trylaorquet -> trylorm  [label= "No"];
+
+trylaorquet -> trylaorquet2[label="Yes"];
+
+trylaorquet2-> rapidcycler [label= "Yes"];
+trylaorquet2-> valproateadjunct [label= "No"];
+
+valproateadjunct       [id=valproateadjunct label="Tried valproate or\n adjunctive antidepressants?",style="filled", URL=placeholder];
+valproateadjunct->consider [label="No"];
+
+
+}

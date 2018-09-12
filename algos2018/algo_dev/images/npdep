@@ -1,0 +1,55 @@
+// 4/28/18 version  updated 5/2/18
+// https://dreampuf.github.io/GraphvizOnline/
+ 
+digraph G {
+graph [ fontsize="12.0" ];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+//subgraph group1{
+back           [id=goBack label="Development Version May 2018\l\nThis algorithm and its associated\lpaper are in press. This flowchart is\lcomplete but clicking its nodes\ldoes not yet show explanatory\ltext or references\l", fontcolor="red", style=rounded,  URL="javascript:navButton('-')"];
+depression          [id=diagnosis label="Non-psychotic Unipolar Depression?", style=filled, style=rounded,URL=placholder];
+svrMel                 [id=svrMel label="Is this an inpatient with severe\nmelancholic depression?",style=filled, style=rounded, URL=placeholder];
+depression -> svrMel [label="Yes"];
+svrMel -> needEct   [label= "Yes"];
+{  rank=same;
+	 melanAntidep_2 comorbid;
+ }
+//-------------Melancholic depression -------------------------------------
+needEct              [id=needEct label="Urgent need\nfor ECT?",style=filled, style=rounded, URL=placeholder];
+ect                      [id=ect label="Try ECT",style=filled, style=rounded, URL=placeholder];
+ketamine             [id=ketamine label="Consider ketamine,\nthen procede to\nchoices below ",style=filled, style=rounded, URL=placeholder];
+melanAntidep_1 [id=melanAntidep_1 label="Try venlafaxine, mirtazapine\nor a TCA",style=filled, style=rounded, URL=placeholder];
+melanAntidep_2 [id=melanAntidep_2 label="Try another of above\nor add Li or T3",style=filled, style=rounded, URL=placeholder];
+needEct -> ect [label="yes"];
+ect -> ketamine [label="Rejected or\ninadequate\nresponse"];
+melanAntidep_1 -> melanAntidep_2 [label="Inadequate\nresponse"];
+needEct -> melanAntidep_1 [label="No"];
+//--------- Main algo path ------------
+mainFirstDrugs   [id=mainFirstDrugs label="Tried one of these: sertraline,\nescitalopram or bupropion?",style=filled, style=rounded, URL=placeholder];
+mainFirstDrugs   [id=mainFirstDrugs label="Tried one of these: sertraline,\nescitalopram or bupropion?",style=filled, style=rounded, URL=placeholder];
+tryMainDrugs     [id=tryMainDrugs label="Try one: sertraline,\n escitalopram\nor bupropion",style=filled, style=rounded, URL=placeholder];
+options               [id=optionsCluster label="Try one of these. None have proven\lgreater effectiveness but side effect\lburdens differ\l\nSwitch choices:\nA different drug among sertraline,\lescitalopram and bupropion\l\nDual action agent: venlafaxine or\lmirtazapine\l\nTMS\l\nNutrients: S-adenosylmethionine (SAMe)\lor St. John's Wort\l\nAugmentation choices:\nNutrients (omega-3 fatty acids, L-methyl-\lfolate or SAMe) or Light therapy\l\nSGA: quetiapine, risperidone or\laripiprazole\l\nBupropion or Mirtazapine\l\nOthers: Lithium orT3\l", shape="box",style=filled, style=rounded, URL=placeholder];
+svrMel  -> mainFirstDrugs [label="No"];
+ketamine  -> melanAntidep_1; 
+mainFirstDrugs -> tryMainDrugs   [label= "No"];
+mainFirstDrugs -> options   [label= "Yes"]
+//--------------------------- Treatment resistent depression ---------------------------------------
+comorbid               [id=comorbid label="Are any of these present?\nChronic pain, OCD, ADHD or PTSD",style=filled, style=rounded, URL=placeholder];
+atypicalQuest        [id=atypicalQuest label="Are atypical features\npresent?",style=filled, style=rounded, URL=placeholder];
+comoOptions         [id=comoOptions label="Options for:\lChronic pain\nTCA (amitriptyline, clomipramine)\l\nDuloxetine (fibromyalgia, diabetic\lperipheral neuropathy, musculo-\lskeletel pain)\l\nGabapentin (post-herpetic neuralgia,\lperipheral neuropathic pain)\l\nPregabalin (post-herpatic neuralgia, spinal\linjury, neuropathic pain, fibromyalgia,\ldiabetic peripheral neuropathy)\l\nCarbamazepine\l\nOCD\nHigh dose SSRI\l\nAugmentation with SGA (risperidone or\laripiprazole)\l\nADHD\nStimulants (e.g. methylphenidate,\ldextroamphetamine)\l\nAtomoxetine\l\nVenlafaxine, desipramine, bupropion\l
+PTSD\nPrazosin or doxazosin\l\nSSRI\l",style=filled, style=rounded, URL=placeholder];
+options  -> comorbid [label="Inadequate response.\nThis is a treatment\nresistant depression"];
+comorbid  -> atypicalQuest [label="No"];
+comorbid  -> comoOptions [label="Yes"];
+//---------Atypical depression --------------------------------------
+treatAtypical           [id=treatAtypical label="Try one:\nMAOI (selegiline, phenelzine)\nor SSRI + aripiprazole",style=filled, style=rounded, URL=placeholder];
+atypicalFailed          [id=atypicalFailed label="Try switches and augmentations\l(above) and these options:\lTCA (imipramine, nortriptyline)\lVenlafaxine + mirtazapine\lAugmentation with ECT\l",style=filled, style=rounded, URL=placeholder];
+atypicalQuest ->treatAtypical  [label="Yes"];
+treatAtypical ->atypicalFailed   [label="Inadequate\nresponse"];
+atypicalQuest ->atypicalFailed  [label="  No"];
+//------------------------------------------------ Final Node -------------------------------
+highlyResistant        [id=highlyResistant label="Highly treatment resistant - see text",style=filled, style=rounded, URL=placeholder];
+comoOptions ->highlyResistant   [label="  Inadequate\nresponse"];
+atypicalFailed ->highlyResistant   [label="Inadequate\nresponse"];
+}

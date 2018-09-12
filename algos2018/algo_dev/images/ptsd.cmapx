@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="placholder" title="PTSD Diagnosis?" alt="" coords="158,5,333,53"/>
+<area shape="rect" id="node2" href="placeholder" title="Sleep Disturbed?" alt="" coords="160,103,331,151"/>
+<area shape="rect" id="node3" href="placeholder" title="Consider Trazodone" alt="" coords="5,421,200,469"/>
+<area shape="rect" id="node4" href="placeholder" title="Try Prazosin" alt="" coords="185,259,311,307"/>
+<area shape="rect" id="node5" href="placeholder" title="Tried SSRI?" alt="" coords="184,524,312,572"/>
+<area shape="rect" id="node6" href="placeholder" title="Try SSRI\n or Alternative" alt="" coords="119,660,257,711"/>
+<area shape="rect" id="node11" href="placeholder" title="Psychosis Present?" alt="" coords="281,661,471,709"/>
+<area shape="rect" id="node7" href="placeholder" title="Tried Second\n SSRI, SNRI\n or Mirtazapine?" alt="" coords="172,779,327,849"/>
+<area shape="rect" id="node9" href="placeholder" title="Try One" alt="" coords="25,959,116,1007"/>
+<area shape="rect" id="node10" href="placeholder" title="Try Third\n SSRI,SNRI,\n Mirtazapine\n or Nefazodone" alt="" coords="140,937,292,1028"/>
+<area shape="rect" id="node12" href="placeholder" title="Consider Augmentation\n or More Monotherapies" alt="" coords="229,1116,451,1167"/>
+<area shape="rect" id="node8" href="placeholder" title="Try\nAntipsychotic" alt="" coords="458,957,593,1008"/>
+<area shape="rect" id="node13" href="placeholder" title="Consider\nQuetiapine,\n Clonidine" alt="" coords="339,1255,458,1325"/>
+<area shape="rect" id="node14" href="placeholder" title="Consider Risperidone,\n Aripiprazole, Quetiapine,\n Lamotrigine, Topiramate" alt="" coords="197,1623,430,1693"/>
+<area shape="rect" id="node15" href="placeholder" title="Consider Aripiprazole,\nLamotrigine" alt="" coords="237,1523,446,1573"/>
+<area shape="rect" id="node16" href="placeholder" title="Consider Prazosin,\nPhenelzine, Levetiracetam" alt="" coords="359,1418,603,1469"/>
+</map>

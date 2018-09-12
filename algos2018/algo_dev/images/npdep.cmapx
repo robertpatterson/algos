@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="goBack" href="javascript:navButton(&#39;-&#39;)" title="Development Version May 2018\l\nThis algorithm and its associated\lpaper are in press. This flowchart is\lcomplete but clicking its nodes\ldoes not yet show explanatory\ltext or references\l" alt="" coords="5,5,325,157"/>
+<area shape="rect" id="diagnosis" href="placholder" title="Non&#45;psychotic Unipolar Depression?" alt="" coords="349,57,680,105"/>
+<area shape="rect" id="svrMel" href="placeholder" title="Is this an inpatient with severe\nmelancholic depression?" alt="" coords="379,225,651,276"/>
+<area shape="rect" id="needEct" href="placeholder" title="Urgent need\nfor ECT?" alt="" coords="321,344,447,395"/>
+<area shape="rect" id="mainFirstDrugs" href="placeholder" title="Tried one of these: sertraline,\nescitalopram or bupropion?" alt="" coords="472,344,741,395"/>
+<area shape="rect" id="ect" href="placeholder" title="Try ECT" alt="" coords="261,474,355,522"/>
+<area shape="rect" id="melanAntidep_1" href="placeholder" title="Try venlafaxine, mirtazapine\nor a TCA" alt="" coords="231,1301,486,1352"/>
+<area shape="rect" id="melanAntidep_2" href="placeholder" title="Try another of above\nor add Li or T3" alt="" coords="261,1440,457,1491"/>
+<area shape="rect" id="comorbid" href="placeholder" title="Are any of these present?\nChronic pain, OCD, ADHD or PTSD" alt="" coords="529,1440,852,1491"/>
+<area shape="rect" id="atypicalQuest" href="placeholder" title="Are atypical features\npresent?" alt="" coords="479,1559,673,1609"/>
+<area shape="rect" id="comoOptions" href="placeholder" title="Options for:\lChronic pain\nTCA (amitriptyline, clomipramine)\l\nDuloxetine (fibromyalgia, diabetic\lperipheral neuropathy, musculo&#45;\lskeletel pain)\l\nGabapentin (post&#45;herpetic neuralgia,\lperipheral neuropathic pain)\l\nPregabalin (post&#45;herpatic neuralgia, spinal\linjury, neuropathic pain, fibromyalgia,\ldiabetic peripheral neuropathy)\l\nCarbamazepine\l\nOCD\nHigh dose SSRI\l\nAugmentation with SGA (risperidone or\laripiprazole)\l\nADHD\nStimulants (e.g. methylphenidate,\ldextroamphetamine)\l\nAtomoxetine\l\nVenlafaxine, desipramine, bupropion\l
+PTSD\nPrazosin or doxazosin\l\nSSRI\l" alt="" coords="596,1633,969,2359"/>
+<area shape="rect" id="ketamine" href="placeholder" title="Consider ketamine,\nthen procede to\nchoices below " alt="" coords="191,1123,377,1193"/>
+<area shape="rect" id="tryMainDrugs" href="placeholder" title="Try one: sertraline,\n escitalopram\nor bupropion" alt="" coords="475,463,653,533"/>
+<area shape="rect" id="optionsCluster" href="placeholder" title="Try one of these. None have proven\lgreater effectiveness but side effect\lburdens differ\l\nSwitch choices:\nA different drug among sertraline,\lescitalopram and bupropion\l\nDual action agent: venlafaxine or\lmirtazapine\l\nTMS\l\nNutrients: S&#45;adenosylmethionine (SAMe)\lor St. John&#39;s Wort\l\nAugmentation choices:\nNutrients (omega&#45;3 fatty acids, L&#45;methyl&#45;\lfolate or SAMe) or Light therapy\l\nSGA: quetiapine, risperidone or\laripiprazole\l\nBupropion or Mirtazapine\l\nOthers: Lithium orT3\l" alt="" coords="509,557,872,1099"/>
+<area shape="rect" id="treatAtypical" href="placeholder" title="Try one:\nMAOI (selegiline, phenelzine)\nor SSRI + aripiprazole" alt="" coords="259,2383,528,2453"/>
+<area shape="rect" id="atypicalFailed" href="placeholder" title="Try switches and augmentations\l(above) and these options:\lTCA (imipramine, nortriptyline)\lVenlafaxine + mirtazapine\lAugmentation with ECT\l" alt="" coords="431,2541,721,2652"/>
+<area shape="rect" id="highlyResistant" href="placeholder" title="Highly treatment resistant &#45; see text" alt="" coords="535,2740,851,2788"/>
+</map>

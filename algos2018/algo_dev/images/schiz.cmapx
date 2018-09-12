@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="diagnosis" href="placholder" title="Schizophrenia Diagnosis?" alt="" coords="255,5,496,53"/>
+<area shape="rect" id="comorbids" href="placholder" title="Consider comorbid conditions:\n Suicidality, Aggressiveness\nAgitation, Negative symptoms,\n Major depression Childbearing potential,\n Substance abuse, Cardiac disease,\n Old age." alt="" coords="193,79,558,209"/>
+<area shape="rect" id="firstepi1" href="placeholder" title="First Episode/First Trial?" alt="" coords="261,235,490,283"/>
+<area shape="rect" id="tryforfirstepi" href="placeholder" title="First Line: Try second generation\n antpsychotic but not clozapine,\n olanzapine or quetiapine" alt="" coords="99,327,398,397"/>
+<area shape="rect" id="unsatresponse2" href="placeholder" title="Second Line: Tried risperidone,\n olanzapine or a first generation\n antipsychotic (FGA)?" alt="" coords="242,576,530,647"/>
+<area shape="rect" id="adequatetrial" href="placeholder" title="Poor tolerance and\nadequate trial defined" alt="" coords="147,441,351,492"/>
+<area shape="rect" id="poortol2a" href="placeholder" title="Try one of these,\n else any SGA or FGA" alt="" coords="166,711,377,761"/>
+<area shape="rect" id="unsatresponse3" href="placeholder" title="Third Line: Transition to\n clozapine monotherapy" alt="" coords="401,711,624,761"/>
+<area shape="rect" id="poortol1a" href="placeholder" title="Try an alternative\n first line drug" alt="" coords="5,586,169,637"/>
+<area shape="rect" id="unsatresponse4" href="placeholder" title="Try adding risperidone\n(see text), lamotrigine or ECT" alt="" coords="283,845,553,896"/>
+<area shape="rect" id="tryalts" href="placeholder" title="Try these in any order.\n If not on clozapine try the\n no&#45;clozapine approaches. " alt="" coords="388,989,637,1060"/>
+<area shape="rect" id="trya" href="placeholder" title="Keep clozapine, try\n one of the two other\n augmentations\nor ECT" alt="" coords="415,1085,610,1176"/>
+<area shape="rect" id="tryb" href="placeholder" title="Keep clozapine, add\n memantine\n or omega3s" alt="" coords="415,1201,610,1272"/>
+<area shape="rect" id="tryc" href="placeholder" title="No clozapine. Try\n another antipsychotic\nmonotherapy e.g.\naripiprazole" alt="" coords="411,1297,615,1388"/>
+<area shape="rect" id="tryd" href="placeholder" title="No clozapine. Try\n combination of\n FGA + mirtazapine\n or SGA + celecoxib" alt="" coords="417,1413,609,1504"/>
+<area shape="rect" id="trye" href="placeholder" title="No clozapine. Try\n other antipsychotic\n combinations" alt="" coords="421,1529,605,1600"/>
+</map>

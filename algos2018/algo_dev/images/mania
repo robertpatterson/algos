@@ -1,0 +1,79 @@
+digraph G {
+graph [ fontsize="12.0" ];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+
+subgraph group1{
+
+mania     [id=diagnosis label="Diagnosis bipolar mania?\n(R/O medical etiology)", style=filled, URL=placholder];
+
+consider     [id=consider label="Taper and discontinue\n antidepressants. Treat comorbid drug\n abuse and anxiety disorders.", URL=placholder];
+
+across      [id=across label="Always consider:\n risks of pregnancy,\n Lorazepam +/- haloperidol for severe agitation and\nECT for patients unresponsive or intolerant of pharmacotherapy\n or those with a history of response to ECT."  style=filled URL=placeholder];
+
+psychotic      [id=psychotic label="Psychosis?"  style=filled URL=placeholder];
+hohaloperidol [id=hohaloperidol label="History of success\n with haloperidol?"  style=filled  URL=placeholder];
+lithium         [id=lithium label="Start or add lithium"  URL=placeholder];
+lithium2        [id=lithium2 label="Add or switch\nto quetiapine"  URL=placeholder];
+haloperidol        [id=haoperidoll label="Try haloperidol", URL=placeholder];
+quetiapine        [id=quetiapine label="Try quetiapine", URL=placeholder];
+getonquetiapine        [id=getonquetiapine label="Replace haloperidol\n with quetiapine", URL=placeholder];
+stopmeds1        [id=stoplithium label="Stop lithium and/or quetiapine if ineffective", URL=placeholder];
+node12          [label="For all options which follow: Stop ineffective\n medications. Keep effective agents.\nAvoid giving two antipsychotics simultaneously.\nSwitch drugs or add as needed.", shape="box", color=lightgrey, URL=placeholder];
+
+valproate        [id=valproate label="Try valproate", URL=placeholder];
+
+mania -> consider [label="Yes"];
+consider ->  across [label="Started or completed"];
+across -> psychotic ;
+
+psychotic -> hohaloperidol   [label= "Severe"];
+psychotic -> lithium [label="No or\n not severe"];
+
+
+hohaloperidol -> haloperidol  [label="Yes"];
+hohaloperidol -> quetiapine  [label="No"];
+
+quetiapine -> lithium ;
+haloperidol -> lithium;
+lithium -> lithium2 [label= "On lithium only"];
+lithium2 -> stopmeds1;
+lithium -> getonquetiapine  [label="On\nhaloperidol"];
+lithium -> stopmeds1  [label="On\n quetiapine"];
+getonquetiapine -> stopmeds1;
+
+stopmeds1 -> valproate ;
+valproate -> node12;
+node12 -> node14 [lhead=cluster5];
+tieriii -> node16 [head=cluster6] ;
+}
+
+//-------------------------------------------------------------------------------
+
+
+subgraph cluster5 {
+	edge [style= invis];
+	 ranksep=equally;
+	node14 [label="Try one of the following options", shape="box", style=filled, color=lightgrey, URL=placeholder];
+
+	tieri    [id=tieri label="First Tier: risperidone, haloperidol,\n olanzapine or carbamazepine ", URL=placeholder];
+	tierii      [id=tierii label="Second Tier: aripiprazole,\nziprasidone or asenapine", URL=placeholder];
+	tieriii    [id=tieriii label="Third Tier: clozapine", URL=placeholder];
+	node14 ->  tieri -> tierii -> tieriii;
+
+}
+
+subgraph cluster6 {
+	edge [style= invis];
+	 ranksep=equally;
+	node16 [label="Try another from any of the three tiers\n above, or consider one of the following.", shape="box", style=filled, color=lightgrey, URL=placeholder];
+
+	tieriiii    [id=tieri label="Oxcarbazepine, paliperidone,\n tamoxifen, OMG-3FA, aspirin,\n calcitonin, allopurinol, repetitive TMS", URL=placeholder];
+
+	node16 -> tieriiii;
+
+}
+
+}

@@ -1,0 +1,29 @@
+digraph G {
+graph [ fontsize="12.0"];
+compound=true;
+node [shape="box", fontname="Arial", style="bold"];
+edge [shape="box", fontname="Arial", style="bold"];
+
+
+diagnosis    [id=diagnosis  label="Diagnosis of Generalized\n Anxiety Disorder", URL=placholder];
+node2        [id=node2  label="Tried an SSRI?",  URL=placholder];
+node2a       [id=node2a  label="Is the partial response\n due to non-pharmacologic\n aspects of care?", URL=placeholder];
+node3        [id=node3  label="Tried a second SSRI,\n venlafaxine, mirtazapine,\nlorazepam or phenelzine?", URL=placeholder];
+augmentbuspirone [id=augmentbuspirone  label="Consider\n augmenting\n with buspirone", URL=placeholder, style=filled];
+tryssri      [id=tryssri label="Try an SSRI", URL=placeholder , style=filled];
+node3no      [id=node3no  label="Try one\n of them", style=filled,  URL=placeholder];
+node4        [id=node4  label="Tried a third drug: SSRI,\n venlafaxine, clonazepam,\n phenelzine or nafazodone?", URL=placeholder];
+node5        [id=node5  label="Untried options above and\n experimental options e.g.\n gabapentin, pregabalin, tiagabine,\n quetiapine, risperidone ", style=filled, URL=placeholder];
+node6        [id=node6  label="Try one", style=filled,  URL=placeholder]; 
+
+diagnosis -> node2 [label="Yes"]; 
+node2 -> node2a [label="Yes. Partial\n response"];
+node2 -> tryssri [label="No"];
+node2a -> augmentbuspirone [label="No. It\n appears to\n be due to\n medication"];
+node2a -> node3 [label="Yes"];
+node2 -> node3 [label="Yes.\n But no\n response"];
+node3 -> node3no  [label="No"];
+node3 -> node4  [label="Yes"];
+node4  -> node5 [label="No"];
+node4 -> node6 [label="Yes"];
+}
