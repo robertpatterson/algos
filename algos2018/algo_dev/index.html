@@ -8,15 +8,14 @@
   
 
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.all.js"></script>
-  		
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/addons/dropdown/jquery.mmenu.dropdown.js"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.dropdown.js"></script> -->
   <!--       <script src="js/offCanvasMenu.js"></script>  -->
    		<link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/jquery.mmenu.all.css" rel="stylesheet" />
    
    <link href="css/hamburgers.min.css" rel="stylesheet">
    
    <link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/extensions/themes/jquery.mmenu.themes.css" rel="stylesheet" />  
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/addons/dropdown/jquery.mmenu.dropdown.css" rel="stylesheet" />     
+<!--  <link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.6/addons/dropdown/jquery.mmenu.dropdown.css" />   -->     
    
    <link href="css/algo.css" rel="stylesheet"/>
 
@@ -29,7 +28,17 @@
     <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, maximum-scale=3.0, width=device-width" />         
 
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,7 +46,7 @@
         <script>
         var Gbl = {
             algoURL: 'http://psychopharm.mobi/docrootAlgo/',
-            serverLocation: 'dev',  //very important
+            serverLocation: 'live',  //very important
             algoObj: null,
             imageAr: null,
             qsParm: new Array(),
@@ -47,8 +56,7 @@
             commonInfoAr: {"task":"commonInfos"},
             currentAlgo: null,
             currentPage: 'title',
-            screenWidth: screen.width,
-            openBio: null
+            screenWidth: screen.width
         };
         
 //		Gbl.screenWidth = window.screen.width * 0.7;
@@ -59,23 +67,43 @@
 </head>
 <body>
 <div id="my-page">
+<!--                   BUTTON                       -->
 
-
-<! --------------BUTTON ---------------------- >
- <button id="my-icon" class="hamburger hamburger--minus" type="button">     
+ <button id="my-icon" class="hamburger hamburger--collapse" type="button">     
    <span class="hamburger-box">
       <span class="hamburger-inner"></span> 
    </span>
+   <span>Menu</span>
 </button>
 
  <div id="my-content">  
 <table border="0" valign="top" cellpadding="4">
+  <tr>
+    <td id= "navButtons" class="hideIt" width="360">
+                        <input type='button' id='backButton' onclick="navButton('inHTML')" value='Back' />
+    </td>
+  </tr>
+  <tr>
     <td valign="top"> 
         <span id="leftPanel"> </span>
         <span id="myMap"> </span>
     </td>
   </tr>
 </table>
+<!--                <table id="devTable" border="0">
+                    <tr>
+                        <td>
+                            <input type="checkbox" onclick="showDevBox(this.checked)" checked/> Show developer info
+                            <div id="devFieldset" class="showIt">
+                                <fieldset>
+                                    <legend>Development Box</legend>
+                                    <input type="button" onclick="developer('helpers')" value="Help and Author Functions" /><br /><br />
+                                </fieldset>
+                            </div>
+                        </td>
+                    </tr>
+</table>  -->
+
     <div id="explainWin" class="hideIt" style="position:absolute; top:100 px; left:10 px; width: 300 px">
     <fieldset>
         <table id="explainWinTable" width="100%" border="1" cellspacing="0" bgcolor="#AA0000">
@@ -89,29 +117,30 @@
 </fieldset>
 </div>
 
-  
 
-<! ------------ MENU -------------------     class="Selected"   ----->
+
+<!--                    MENU                  -->
 <nav id="my-menu">
    <ul>
-	<li><span>Algorithm Flowcharts</span><ul>
-            <li><a href="#" onclick="showCommonInfo('npdep','title')" id="npdep">Non-Psychotic Depression</a></li>
-            <li><a href="#" onclick="showCommonInfo('adhd', 'title')"  id=adhd)">ADHD</a></li>
-            <li><a href="#" onclick="showCommonInfo('pdep', 'title')" id="pdep">Psychotic Depression</a></li>
-            <li><a href="#" onclick="showCommonInfo('bpdep','title')" id="bpdep">Bipolar Depression</a></li>
-            <li><a href="#" onclick="showCommonInfo('mania','title')" id="mania">Bipolar Mania</a></li>
-            <li><a href="#" onclick="showCommonInfo('schiz','title')" id="schiz">Schizophrenia</a></li>
-            <li><a href="#" onclick="showCommonInfo('gad',  'title')" id="gad">Gereralized Anxiety Disprder</a></li>
-            <li><a href="#" onclick="showCommonInfo('anxiety',  'title')" id="sad">Social Anxiety Disporder</a></li>
-            <li><a href="#" onclick="showCommonInfo('ptsd', 'title')" id="ptsd">Posttraumatic Stress Disorder</a></li>
-</ul></li>
-	<li><a href="#" onclick="showCommonInfo('title','leftPanel')"  id="home">Home</a></li>
-    <li><a href="#" onclick="showCommonInfo('about','leftPanel')"  id="about">About</a></li>
-    <li><a href="#" onclick="showCommonInfo('dnobio','leftPanel')"  id="ndobio">David N. Osser, M.D. biography</a></li>
-    <li><a href="#" onclick="showCommonInfo('contact','leftPanel')"  href="#">Contact</a></li>
+	<li><a id="menuHeading0"><span>Algorithm Flowcharts</span></a></li>
+            <li><a id="npdep">Non-Psychotic Depression</a></li>
+            <li><a id="adhd">ADHD</a></li>
+            <li><a id="pdep">Psychotic Depression</a></li>
+            <li><a id="bpdep">Bipolar Depression</a></li>
+            <li><a id="schiz">Schizophrenia</a></li>
+            <li><a id="gad">Gereralized Anxiety Disprder</a></li>
+            <li><a id="sad">Social Anxiety Disporder</a></li>
+            <li><a id="ptsd">Posttraumatic Stress Disorder</a></li>
+      <li><a id="menuHeading1">Other Things</a></li>
+      <li><a id="about">About</a></li>
+      <li><a id="ndobio">David N. Osser, M.D. biography</a></li>
+      <li><a href="/contact/">Contact</a></li>
    </ul>
-</nav> 
- 
+</nav>      
+      
+<!--_________________________________________________  --> 
+
+
 </div>  <!--  end my-content-->
 </div>  <!--  end my-page -->
 
